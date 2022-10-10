@@ -1,0 +1,11 @@
+.Site-logo {
+  animation: Site-logo-spin infinite 15s linear;
+}
+@keyframes Site-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
