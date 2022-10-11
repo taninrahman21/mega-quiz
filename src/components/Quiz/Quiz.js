@@ -8,7 +8,6 @@ const Quiz = () => {
   return (
     <div>
       <h2 className='text-3xl text-blue-700 font-semibold text-center mt-10'>Start {name} Quizes</h2>
-      <p>length: {questions.length}</p>
       <div className='flex flex-col justify-center items-center'>
         {
           questions.map(question => <Question key={question.id} quiz={question}></Question>)
