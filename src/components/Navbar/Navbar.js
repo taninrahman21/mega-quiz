@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,10 +10,10 @@ const Navbar = () => {
           <h1 className="text-3xl">Mega Quiz</h1>
         </div>
         <div className="text-1xl">
-          <Link className="ml-5" to="/">Home</Link>
-          <Link className="ml-5" to="/topics">Quiz Topics</Link>
-          <Link className="ml-5" to="/statistics">Statistics</Link>
-          <Link className="ml-5" to="/blogs">Blogs</Link>
+          <NavLink exact="true" className={({isActive}) => isActive ? " text-orange-600 ml-5":" text-white ml-5"} to="/home">Home</NavLink>
+          <NavLink exact="true" className={({isActive}) => isActive ? " text-orange-600 ml-5":" text-white ml-5"} to="/topics">Quiz Topics</NavLink>
+          <NavLink exact="true" className={({isActive}) => isActive ?" text-orange-600 ml-5":" text-white ml-5"} to="/statistics">Statistics</NavLink>
+          <NavLink exact="true" className={({isActive}) => isActive ?" text-orange-600 ml-5":" text-white ml-5"} to="/blogs">Blogs</NavLink>
         </div>
       </nav>
     </div>
