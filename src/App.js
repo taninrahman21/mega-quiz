@@ -5,6 +5,7 @@ import Blogs from "./components/Blogs/Blogs";
 import Main from "./components/Main/Main";
 import Home from "./components/Home/Home";
 import Quiz from "./components/Quiz/Quiz";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +41,10 @@ function App() {
         }
       ]
     },
+    {
+      path: "*",
+      element: <NotFound></NotFound>
+    }
   ]);
   return (
     <RouterProvider router={router}>
