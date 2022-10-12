@@ -9,50 +9,52 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-slate-800 text-white">
-        <nav className="flex w-10/12 mx-auto justify-between items-center py-2">
+        <nav className="flex w-10/12 mx-auto justify-between items-center py-2 relative">
           <div>
             <h1 className="text-3xl">Mega Quiz</h1>
           </div>
-          <div className="text-1xl">
-            <NavLink
+          <ul className={`text-1xl md:flex absolute w-[100%] md:w-fit px-5 py-2 bg-blue-500 duration-500 ease-in rounded-md md:rounded-none z-10 md:bg-slate-800 md:static ${open ? "top-[52px]" : "top-[-150px]"}`}>
+            <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-                isActive ? " text-orange-600 ml-5" : " text-white ml-5"
+              isActive ? " text-orange-600 font-bold" : "text-white"
               }
               to="/home"
             >
               Home
-            </NavLink>
-            <NavLink
+            </NavLink></li>
+            
+            <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-                isActive ? " text-orange-600 ml-5" : " text-white ml-5"
+              isActive ? " text-orange-600 font-bold" : "text-white"
               }
               to="/topics"
             >
               Quiz Topics
-            </NavLink>
-            <NavLink
+            </NavLink></li>
+            <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-                isActive ? " text-orange-600 ml-5" : " text-white ml-5"
+              isActive ? " text-orange-600 font-bold" : "text-white"
               }
               to="/statistics"
             >
               Statistics
-            </NavLink>
-            <NavLink
+            </NavLink></li>
+
+            <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-                isActive ? " text-orange-600 ml-5" : " text-white ml-5"
+                isActive ? " text-orange-600 font-bold" : "text-white"
               }
               to="/blogs"
             >
               Blogs
-            </NavLink>
-          </div>
-          
-          <div onClick={() => setOpen(!open)} className="md:hidden">
+            </NavLink></li>
+          </ul>
+
+          <div onClick={() => setOpen(!open)} className="md:hidden text-[20px]">
             {open ? (
               <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
             ) : (
