@@ -5,7 +5,8 @@ import Topic from "../Topic/Topic";
 import './Home.css';
 
 const Home = () => {
-  const { data } = useLoaderData();
+  const topics = useLoaderData();
+  const {data} = topics;
   return (
     <div >
     <div className="bg-slate-300 flex flex-col border justify-center items-center h-[450px]">

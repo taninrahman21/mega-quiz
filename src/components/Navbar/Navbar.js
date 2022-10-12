@@ -31,7 +31,7 @@ const Navbar = () => {
               }
               to="/topics"
             >
-              Quiz Topics
+              Quiz
             </NavLink></li>
             <li className='mr-5'><NavLink
               exact="true"
