@@ -8,7 +8,6 @@ const Option = ({option, correctAnswer}) => {
     if(clickedAnswer === correctAnswer){
       alert("Your answer is correct!");
     } else {
-      setQuizAlert(true);
       alert("Your given answer is wrong!")
     }
   }

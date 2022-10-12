@@ -23,7 +23,7 @@ const Question = ({ quiz }) => {
         ></FontAwesomeIcon>
       </div>
 
-      <div className={`border bg-gray-300 border-blue-300 rounded-md p-5 text-center w-3/5 md:w-1/3 fixed top-[40%] left-[33%] ${seeCorrect ? "block" : "hidden"}`}>
+      <div className={`border bg-gray-300 border-blue-300 rounded-md p-5 text-center w-3/5 md:w-1/3 fixed top-[40%] left-[20%] md:left-[30%] ${seeCorrect ? "block" : "hidden"}`}>
         <h1 className="text-2xl">
           Correct Answer:
         </h1>
