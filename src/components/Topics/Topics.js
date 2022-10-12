@@ -8,7 +8,7 @@ const Topics = () => {
     <div>
       <h1 className="text-3xl text-blue-700 text-center
       mt-5 font-bold">Select The Quiz Topics</h1>
-      <div className="grid grid-cols-2 gap-20px items-center w-2/5 mx-auto my-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20px items-center w-3/5 lg:w-2/5 mx-auto my-4 lg:my-10">
         {data.map((topic, idx) => (
           <Topic key={idx} topic={topic}></Topic>
         ))}

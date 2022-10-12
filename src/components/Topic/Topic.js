@@ -5,7 +5,7 @@ const Topic = ({topic}) => {
   const {logo, name, id } = topic;
   return (
     <div className='bg-gray-100 flex flex-col border px-2 py-4 border-gray-300 rounded-md m-5'>
-      <img className='w-2/5' src={logo} alt="" />
+      <img className='w-3/4 lg:w-2/5' src={logo} alt="topic logo" />
       <div>
         <h2 className='text-2xl font-semibold'>{name}</h2>
       </div>
