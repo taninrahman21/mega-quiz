@@ -1,19 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Option = ({option, correctAnswer}) => {
   const [quizAlert, setQuizAlert] = useState(false);
   const userClickedAnswer = (e) => {
     const clickedAnswer = e.target.value;
     if(clickedAnswer === correctAnswer){
-      alert("Your answer is correct!");
+      toast.success("Wooho!Correct Answer!");
     } else {
-      alert("Your given answer is wrong!")
+      toast.error("Ooops!Wrong Answer");
     }
   }
   return (
     <>
     <div className='mb-3 border border-gray-100 mr-4 p-3 bg-gray-100 rounded-md'>
+      <Toaster position="top-center" reverseOrder={false}></Toaster>
         <input onClick={userClickedAnswer} className='ml-2' type="radio" value={option} name="option" />
         <label className='ml-2 text-[20px]' htmlFor="option">{option}</label>
       </div>
