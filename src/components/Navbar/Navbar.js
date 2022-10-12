@@ -13,11 +13,11 @@ const Navbar = () => {
           <div>
             <h1 className="text-3xl">Mega Quiz</h1>
           </div>
-          <ul className={`text-1xl md:flex absolute w-[100%] md:w-fit px-5 py-2 bg-blue-500 duration-500 ease-in rounded-md md:rounded-none z-10 md:bg-slate-800 md:static ${open ? "top-[52px]" : "top-[-150px]"}`}>
+          <ul className={`text-1xl flex flex-col md:flex-row justify-center items-center absolute w-[100%] md:w-fit py-2 bg-gray-400 duration-500 ease-in rounded-md md:rounded-none z-10 md:bg-slate-800 md:static ${open ? "top-[52px]" : "top-[-150px]"}`}>
             <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-              isActive ? " text-orange-600 font-bold" : "text-white"
+              isActive ? " text-red-600 font-bold" : "text-white"
               }
               to="/home"
             >
@@ -27,7 +27,7 @@ const Navbar = () => {
             <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-              isActive ? " text-orange-600 font-bold" : "text-white"
+              isActive ? " text-red-600 font-bold" : "text-white"
               }
               to="/topics"
             >
@@ -36,7 +36,7 @@ const Navbar = () => {
             <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-              isActive ? " text-orange-600 font-bold" : "text-white"
+              isActive ? " text-red-600 font-bold" : "text-white"
               }
               to="/statistics"
             >
@@ -46,7 +46,7 @@ const Navbar = () => {
             <li className='mr-5'><NavLink
               exact="true"
               className={({ isActive }) =>
-                isActive ? " text-orange-600 font-bold" : "text-white"
+                isActive ? " text-red-600 font-bold" : "text-white"
               }
               to="/blogs"
             >
