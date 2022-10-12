@@ -19,12 +19,10 @@ function App() {
         },
         {
           path: "/home",
-          loader: async () => await fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
         {
           path: "/topics",
-          loader: async () => await fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Topics></Topics>
         },
         {

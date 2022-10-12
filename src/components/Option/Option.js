@@ -18,7 +18,7 @@ const Option = ({option, correctAnswer}) => {
         <input onClick={userClickedAnswer} className='ml-2' type="radio" value={option} name="option" />
         <label className='ml-2 text-[20px]' htmlFor="option">{option}</label>
       </div>
-     <div className={`border bg-gray-300 border-blue-300 rounded-md p-5 text-center w-1/3 fixed top-[40%] left-[33%] ${quizAlert ? "block" : "hidden"}`}>
+     <div className={`border bg-gray-300 border-blue-300 rounded-md p-5 text-center w-3/4 md:w-2/4 lg:w-1/3 fixed top-[40%] left-[33%] ${quizAlert ? "block" : "hidden"}`}>
         <h1 className="text-2xl">
           Correct Answer:
         </h1>
