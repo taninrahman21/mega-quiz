@@ -9,7 +9,7 @@ const Topic = ({topic}) => {
       <div>
         <h2 className='text-2xl font-semibold'>{name}</h2>
       </div>
-      <NavLink className={({isActive}) => isActive ?" text-orange-600 ":" text-white"} to={`/topics/${id}`}>
+      <NavLink to={`/topics/${id}`}>
       <button className=" w-full py-2 px-5 bg-blue-800 rounded-md text-white mt-3">Start Quiz</button></NavLink>
     </div>
   );

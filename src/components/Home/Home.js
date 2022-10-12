@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Logo from "../../../src/logo.png";
-import Topics from "../Topics/Topics";
+import Topic from "../Topic/Topic";
 import './Home.css';
 
 const Home = () => {
+  const { data } = useLoaderData();
   return (
     <div >
     <div className="bg-slate-300 flex flex-col border justify-center items-center h-[450px]">
@@ -20,7 +21,11 @@ const Home = () => {
         <button className="py-3 px-7 bg-blue-800 rounded-md text-white mt-3">Start Now</button>
       </Link>
     </div>
-    <Topics></Topics>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-20px items-center w-3/4 mx-auto my-4 lg:my-10">
+        {data.map((topic, idx) => (
+          <Topic key={idx} topic={topic}></Topic>
+        ))}
+      </div>
     </div>
   );
 };
